@@ -4,33 +4,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>À propos</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      body { font-family: 'Inter', system-ui, sans-serif; }
+      .glassmorphism { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+      .animate-fade-in { animation: fadeIn 0.6s ease-in; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container">
-        <a class="brand" href="index.html">Portfolio</a>
-        <nav class="main-nav">
-          <a href="travaux.html">Travaux</a>
-          <a href="supports.html">Supports</a>
-          <a href="certifications.html">Certifications</a>
-          <a href="projet.html">Projet final</a>
-          <a href="diaporama.html">Diaporama</a>
-          <a href="ressources.html">Ressources</a>
-          <a href="about.html" class="active">À propos</a>
+  <body class="bg-gradient-to-br from-slate-950 via-orange-950 to-slate-950 text-slate-100 min-h-screen">
+    <header class="sticky top-0 z-50 glassmorphism">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a class="text-2xl font-bold bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent" href="index.html">Portfolio</a>
+        <nav class="flex gap-6 text-sm font-medium">
+          <a href="travaux.html" class="hover:text-orange-400 transition-colors">Travaux</a>
+          <a href="supports.html" class="hover:text-orange-400 transition-colors">Supports</a>
+          <a href="certifications.html" class="hover:text-orange-400 transition-colors">Certificats</a>
+          <a href="projet.html" class="hover:text-orange-400 transition-colors">Projet</a>
+          <a href="diaporama.html" class="hover:text-orange-400 transition-colors">Diapo</a>
+          <a href="ressources.html" class="hover:text-orange-400 transition-colors">Ressources</a>
+          <a href="about.html" class="text-orange-400 border-b-2 border-orange-400">À propos</a>
         </nav>
       </div>
     </header>
 
-    <main class="container">
-      <h2>À propos de moi</h2>
-      <p>CV (format ATS) : <a href="assets/CV-ATS.pdf">Télécharger le CV ATS (placeholder)</a></p>
-      <p>LinkedIn : <em>Ajoutez votre URL LinkedIn dans ce fichier</em></p>
-      <p>Photo et détails : remplacez les placeholders dans le dossier <code>assets/</code>.</p>
+    <main class="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
+      <h1 class="text-4xl font-bold mb-8 bg-gradient-to-r from-orange-300 to-amber-400 bg-clip-text text-transparent">À propos de moi</h1>
+
+      <section class="glassmorphism p-8 rounded-xl mb-6">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><span class="text-orange-400">📄</span> CV</h2>
+        <p class="text-slate-300 mb-4">Format ATS (Applicant Tracking System) optimisé pour les recruteurs.</p>
+        <a href="assets/CV-ATS.pdf" class="inline-block px-6 py-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-orange-500/50 transition-all transform hover:scale-105">
+          Télécharger le CV
+        </a>
+      </section>
+
+      <section class="glassmorphism p-8 rounded-xl">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><span class="text-orange-400">🔗</span> Réseaux</h2>
+        <p class="text-slate-400 mb-4">Remplacez les liens ci-dessous par vos profils :</p>
+        <ul class="space-y-2 text-slate-300">
+          <li>LinkedIn : <em class="text-slate-400">À ajouter</em></li>
+          <li>GitHub : <em class="text-slate-400">À ajouter</em></li>
+        </ul>
+      </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">Retour à <a href="index.html">l'accueil</a>.</div>
+    <footer class="border-t border-white/10 mt-20 py-8 text-center text-slate-400">
+      <div class="max-w-6xl mx-auto px-6">
+        <a href="index.html" class="hover:text-orange-400 transition-colors">← Retour à l'accueil</a>
+      </div>
     </footer>
     <script src="js/main.js"></script>
   </body>

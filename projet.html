@@ -4,38 +4,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Rubrique 4 — Projet final</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      body { font-family: 'Inter', system-ui, sans-serif; }
+      .glassmorphism { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+      .animate-fade-in { animation: fadeIn 0.6s ease-in; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container">
-        <a class="brand" href="index.html">Portfolio</a>
-        <nav class="main-nav">
-          <a href="travaux.html">Travaux</a>
-          <a href="supports.html">Supports</a>
-          <a href="certifications.html">Certifications</a>
-          <a href="projet.html" class="active">Projet final</a>
-          <a href="diaporama.html">Diaporama</a>
-          <a href="ressources.html">Ressources</a>
-          <a href="about.html">À propos</a>
+  <body class="bg-gradient-to-br from-slate-950 via-orange-950 to-slate-950 text-slate-100 min-h-screen">
+    <header class="sticky top-0 z-50 glasmorphism">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a class="text-2xl font-bold bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent" href="index.html">Portfolio</a>
+        <nav class="flex gap-6 text-sm font-medium">
+          <a href="travaux.html" class="hover:text-orange-400 transition-colors">Travaux</a>
+          <a href="supports.html" class="hover:text-orange-400 transition-colors">Supports</a>
+          <a href="certifications.html" class="hover:text-orange-400 transition-colors">Certificats</a>
+          <a href="projet.html" class="text-orange-400 border-b-2 border-orange-400">Projet</a>
+          <a href="diaporama.html" class="hover:text-orange-400 transition-colors">Diapo</a>
+          <a href="ressources.html" class="hover:text-orange-400 transition-colors">Ressources</a>
+          <a href="about.html" class="hover:text-orange-400 transition-colors">À propos</a>
         </nav>
       </div>
     </header>
 
-    <main class="container">
-      <h2>Rubrique 4 — Le projet final</h2>
-      <p>Concevoir et réaliser un projet numérique intégrant les compétences acquises. Déposez la documentation et les livrables dans <code>/uploads/projet/</code>.</p>
+    <main class="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
+      <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-300 to-amber-400 bg-clip-text text-transparent">Rubrique 4 — Projet Final</h1>
+      <p class="text-slate-300 mb-8">Concevez un projet numérique intégrant vos compétences acquises. Déposez documentation, livrables et captures d'écran.</p>
 
-      <section>
-        <h3>Fichiers déposés</h3>
-        <div id="files-list"><p style="color: var(--muted);">Chargement...</p></div>
+      <section class="glassmorphism p-8 rounded-xl">
+        <h2 class="text-xl font-bold mb-6 flex items-center gap-2"><span class="text-amber-500">⚙️</span> Fichiers déposés</h2>
+        <div id="files-list" class="space-y-3 text-slate-400">
+          <p>Chargement...</p>
+        </div>
       </section>
-
-      
     </main>
 
-    <footer class="site-footer">
-      <div class="container">Retour à <a href="index.html">l'accueil</a>.</div>
+    <footer class="border-t border-white/10 mt-20 py-8 text-center text-slate-400">
+      <div class="max-w-6xl mx-auto px-6">
+        <a href="index.html" class="hover:text-orange-400 transition-colors">← Retour à l'accueil</a>
+      </div>
     </footer>
     <script src="js/main.js"></script>
   </body>

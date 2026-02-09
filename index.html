@@ -4,66 +4,97 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Portfolio - Accueil</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      body { font-family: 'Inter', system-ui, sans-serif; }
+      .glassmorphism { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+      .animate-fade-in { animation: fadeIn 0.6s ease-in; }
+      .animate-slide-up { animation: slideUp 0.6s ease-out; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      .delay-100 { animation-delay: 0.1s; }
+      .delay-200 { animation-delay: 0.2s; }
+      .delay-300 { animation-delay: 0.3s; }
+      .delay-400 { animation-delay: 0.4s; }
+    </style>
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container">
-        <a class="brand" href="index.html">Portfolio</a>
-        <nav class="main-nav">
-          <a href="travaux.html">Travaux</a>
-          <a href="supports.html">Supports</a>
-          <a href="certifications.html">Certifications</a>
-          <a href="projet.html">Projet final</a>
-          <a href="diaporama.html">Diaporama</a>
-          <a href="ressources.html">Ressources</a>
-          <a href="about.html">À propos</a>
+  <body class="bg-gradient-to-br from-slate-950 via-orange-950 to-slate-950 text-slate-100 min-h-screen">
+    <header class="sticky top-0 z-50 glassmorphism">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a class="text-2xl font-bold bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent" href="index.html">Portfolio</a>
+        <nav class="flex gap-6 text-sm font-medium">
+          <a href="travaux.html" class="nav-link hover:text-orange-400 transition-colors">Travaux</a>
+          <a href="supports.html" class="nav-link hover:text-orange-400 transition-colors">Supports</a>
+          <a href="certifications.html" class="nav-link hover:text-orange-400 transition-colors">Certificats</a>
+          <a href="projet.html" class="nav-link hover:text-orange-400 transition-colors">Projet</a>
+          <a href="diaporama.html" class="nav-link hover:text-orange-400 transition-colors">Diapo</a>
+          <a href="ressources.html" class="nav-link hover:text-orange-400 transition-colors">Ressources</a>
+          <a href="about.html" class="nav-link hover:text-orange-400 transition-colors">À propos</a>
         </nav>
       </div>
     </header>
 
-    <main class="container hero">
-      <div class="intro">
-        <img class="avatar" src="assets/profile.svg" alt="Photo de profil" />
-        <h1>Portfolio académique</h1>
-        <p>Organisez et présentez vos travaux, certificats et projets.</p>
-        <div class="actions">
-          <a class="btn" href="travaux.html">Voir les travaux</a>
-          <a class="btn ghost" href="about.html">À propos</a>
+    <main class="max-w-6xl mx-auto px-6 py-16">
+      <!-- Hero Section -->
+      <section class="text-center mb-20 animate-fade-in">
+        <div class="mb-8">
+          <img class="w-24 h-24 rounded-2xl mx-auto border border-orange-400/30 animate-slide-up" src="assets/profile.svg" alt="Photo de profil" />
         </div>
-      </div>
+        <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-orange-300 via-amber-400 to-orange-500 bg-clip-text text-transparent animate-slide-up delay-100">
+          Portfolio Académique
+        </h1>
+        <p class="text-xl text-slate-300 mb-10 animate-slide-up delay-200 max-w-2xl mx-auto">
+          Organisez et présentez vos travaux, certificats et projets en un seul endroit.
+        </p>
+        <div class="flex gap-4 justify-center animate-slide-up delay-300">
+          <a href="travaux.html" class="px-8 py-3 bg-gradient-to-r from-orange-500 to-amber-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-orange-500/50 transition-all transform hover:scale-105">
+            Voir les travaux
+          </a>
+          <a href="about.html" class="px-8 py-3 glassmorphism rounded-lg font-semibold hover:bg-white/20 transition-all">
+            À propos
+          </a>
+        </div>
+      </section>
 
-      <section class="grid">
-        <a class="card" href="travaux.html">
-          <h3>Rubrique 1 — Travaux</h3>
-          <p>Déposer et organiser les productions académiques.</p>
+      <!-- Cards Grid -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-up delay-400">
+        <a href="travaux.html" class="glassmorphism p-6 rounded-xl hover:border-orange-400 transition-all group cursor-pointer">
+          <div class="text-3xl mb-3 text-orange-400">📑</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-orange-400 transition-colors">Rubrique 1 — Travaux</h3>
+          <p class="text-slate-300 text-sm">Déposer et organiser les productions académiques.</p>
         </a>
-        <a class="card" href="supports.html">
-          <h3>Rubrique 2 — Supports</h3>
-          <p>Notes de cours structurées et complétées.</p>
+        <a href="supports.html" class="glassmorphism p-6 rounded-xl hover:border-orange-400 transition-all group cursor-pointer">
+          <div class="text-3xl mb-3 text-amber-400">📚</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-orange-400 transition-colors">Rubrique 2 — Supports</h3>
+          <p class="text-slate-300 text-sm">Notes de cours structurées et complétées.</p>
         </a>
-        <a class="card" href="certifications.html">
-          <h3>Rubrique 3 — Certifications</h3>
-          <p>Certificats et projets valorisants.</p>
+        <a href="certifications.html" class="glassmorphism p-6 rounded-xl hover:border-orange-400 transition-all group cursor-pointer">
+          <div class="text-3xl mb-3 text-orange-300">🏆</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-orange-400 transition-colors">Rubrique 3 — Certifications</h3>
+          <p class="text-slate-300 text-sm">Certificats et projets valorisants.</p>
         </a>
-        <a class="card" href="projet.html">
-          <h3>Rubrique 4 — Projet final</h3>
-          <p>Présentation et documentation du projet.</p>
+        <a href="projet.html" class="glassmorphism p-6 rounded-xl hover:border-orange-400 transition-all group cursor-pointer">
+          <div class="text-3xl mb-3 text-amber-500">⚙️</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-orange-400 transition-colors">Rubrique 4 — Projet final</h3>
+          <p class="text-slate-300 text-sm">Présentation et documentation du projet.</p>
         </a>
-        <a class="card" href="diaporama.html">
-          <h3>Rubrique 5 — Diaporama</h3>
-          <p>Diaporama prêt pour la soutenance.</p>
+        <a href="diaporama.html" class="glassmorphism p-6 rounded-xl hover:border-orange-400 transition-all group cursor-pointer">
+          <div class="text-3xl mb-3 text-orange-400">🎬</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-orange-400 transition-colors">Rubrique 5 — Diaporama</h3>
+          <p class="text-slate-300 text-sm">Diaporama prêt pour la soutenance.</p>
         </a>
-        <a class="card" href="ressources.html">
-          <h3>Rubrique 6 — Autres ressources</h3>
-          <p>Veille et compléments personnels.</p>
+        <a href="ressources.html" class="glassmorphism p-6 rounded-xl hover:border-orange-400 transition-all group cursor-pointer">
+          <div class="text-3xl mb-3 text-amber-400">🌐</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-orange-400 transition-colors">Rubrique 6 — Ressources</h3>
+          <p class="text-slate-300 text-sm">Veille et compléments personnels.</p>
         </a>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>Portfolio - Liam PROROVNER</p>
+    <footer class="border-t border-white/10 mt-20 py-8 text-center text-slate-400">
+      <div class="max-w-6xl mx-auto px-6">
+        <p>Portfolio académique - Liam PROROVNER</p>
       </div>
     </footer>
 
