@@ -8,6 +8,5 @@ Remarques :
 - Remplacez `assets/CV-ATS.pdf` par votre CV en PDF.
 - Ajoutez votre URL LinkedIn dans `about.html` ou remplacez le texte.
 - Déposez vos fichiers dans les dossiers `uploads/*` correspondants.
-
 ---
 Portfolio 
